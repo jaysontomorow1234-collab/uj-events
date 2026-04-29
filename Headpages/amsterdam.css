@@ -1,0 +1,210 @@
+/* =========================================
+   1. ALGEMENE STIJLEN & RESET
+   ========================================= */
+body {
+    background-color: #000000; 
+    color: #ffffff;          
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Voorkomt horizontaal scrollen door animaties */
+}
+
+/* =========================================
+   2. NAVIGATIE (DESKTOP)
+   ========================================= */
+header {
+    background-color: #111111;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.6s;
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Goud effect */
+}
+
+/* Hamburger Icoon (Standaard onzichtbaar op desktop) */
+.hamburger {
+    display: none; 
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+/* =========================================
+   3. UPCOMING EVENT SECTIE (Summer Jam)
+   ========================================= */
+.upcoming-event {
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.event-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background-color: #0a0a0a;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #222;
+    box-shadow: 0 0 30px rgba(107, 33, 168, 0.1); /* Subtiele paarse gloed */
+}
+
+.event-image-box img {
+    width: 450px; /* Lekker grote poster */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+.event-info {
+    flex: 1;
+}
+
+.event-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background-color: transparent; 
+    padding: 0; 
+    border: none; 
+    box-shadow: none;
+}
+
+.event-image-box img {
+    width: 450px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.9); /* Diepe schaduw voor diepte */
+}
+.event-info {
+    flex: 1;
+}
+
+/* De Titel: Verloop van wit naar goud */
+.event-info h2 {
+    font-size: 2.8rem;
+    margin: 0 0 10px 0;
+    background: linear-gradient(to right, #ffffff, #ffd700);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: white; /* Voor als de browser het verloop niet snapt */
+}
+
+.event-date {
+    font-weight: bold;
+    color: #f97316; 
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.event-description {
+    line-height: 1.8;
+    color: #dddddd;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   4. ANIMATIES (REVEAL)
+   ========================================= */
+.reveal {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 1.2s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================
+   5. MEDIA QUERIES (ALTIJD ONDERAAN)
+   ========================================= */
+@media (max-width: 992px) {
+    .event-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .event-image-box img {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 10px 20px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #111;
+        width: 100%;
+        text-align: center;
+        padding: 30px 0;
+        z-index: 999;
+        border-bottom: 1px solid #333;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .event-info h2 {
+        font-size: 2rem;
+    }
+}

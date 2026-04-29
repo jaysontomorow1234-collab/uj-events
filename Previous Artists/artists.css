@@ -18,11 +18,11 @@ body {
    NAVIGATION & HAMBURGER (DESKTOP)
    ========================================= */
 header {
-    background-color: #494040;
+    background-color: #0c0c0c00;
     padding: 20px 0px;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
 }
 
 nav {
