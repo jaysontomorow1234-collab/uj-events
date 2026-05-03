@@ -115,7 +115,7 @@ nav {
     background: #0f0f0f;
     border-radius: 15px;
     overflow: hidden;
-    border: 1px solid #222;
+    border: 2px solid #222;
     transition: all 0.4s ease;
 }
 
