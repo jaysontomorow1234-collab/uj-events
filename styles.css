@@ -233,6 +233,23 @@ nav ul li a:hover {
 }
 
 /* Social Mini Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: #ffffff; /* Maakt ze wit zodat ze opvallen op de zwarte achtergrond */
+    font-size: 1.5rem; /* Iets groter voor de looks */
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: var(--deep-teal); /* De bekende UJ Events kleur op hover */
+    transform: translateY(-3px); /* Kleine animatie */
+}
 .footer-social-mini {
     display: flex;
     gap: 15px;
@@ -240,12 +257,8 @@ nav ul li a:hover {
 
 .footer-social-mini a {
     color: white;
-    font-size: 1.3rem;
+    font-size: 3px;
     transition: color 0.3s ease;
-}
-
-.footer-social-mini a:hover {
-    color: var(--deep-teal);
 }
 
 /* Links & Contact */
