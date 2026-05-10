@@ -132,6 +132,16 @@ nav ul li a:hover {
     color: white; /* Voor als de browser het verloop niet snapt */
 }
 
+.event-info h3 {
+    font-size: 1.8rem;
+    margin: 0 0 10px 0;
+    background: linear-gradient(to right, #ffffff, #ffd700);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: white; /* Voor als de browser het verloop niet snapt */
+}
+
 .event-date {
     font-weight: bold;
     color: #f97316; 
