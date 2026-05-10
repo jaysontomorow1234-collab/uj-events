@@ -108,7 +108,6 @@ nav ul li a:hover,
     font-size: 2.7rem; /* kleiner */
     line-height: 1.15;
     margin-bottom: 20px;
-
     background: linear-gradient(to right, #ffffff, #f5d76e);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
